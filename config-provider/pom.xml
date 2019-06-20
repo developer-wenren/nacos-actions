@@ -2,39 +2,44 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.one.learn</groupId>
         <artifactId>nacos-actions</artifactId>
         <version>1.0.0</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    <groupId>com.one.learn.nacos</groupId>
+    <artifactId>config-provider</artifactId>
+    <version>1.0.0</version>
+    <name>config-provider</name>
+    <description>config-provider for Spring Boot</description>
 
-    <artifactId>rest-provider</artifactId>
-    <packaging>jar</packaging>
-    <name>rest-provider</name>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.alibaba.nacos/nacos-spring-context -->
         <dependency>
-            <groupId>com.alibaba.nacos</groupId>
-            <artifactId>nacos-spring-context</artifactId>
-            <version>0.2.2-RC1</version>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>nacos-config-spring-boot-starter</artifactId>
+            <version>0.2.1</version>
         </dependency>
 
-        <!-- Spring Boot Begin -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- Spring Boot End -->
 
-        <!-- Spring Cloud Begin -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
-        <!-- Spring Cloud End -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -42,10 +47,8 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.funtl.hello.spring.cloud.alibaba.nacos.provider.NacosProviderApplication</mainClass>
-                </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>

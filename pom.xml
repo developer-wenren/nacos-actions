@@ -6,7 +6,7 @@
         <module>rest-cosumer</module>
         <module>rest-provider</module>
         <module>dubbo-service</module>
-        <module>rest-consumer-feign</module>
+        <module>config-provider</module>
     </modules>
 
     <parent>
@@ -20,7 +20,7 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
-    <name>nacos-actionss</name>
+    <name>nacos-actions</name>
 
     <properties>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
