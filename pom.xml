@@ -6,7 +6,10 @@
         <module>rest-cosumer</module>
         <module>rest-provider</module>
         <module>dubbo-service</module>
-        <module>config-provider</module>
+        <module>nacos-spring-example</module>
+        <module>nacos-springboot-example</module>
+        <module>nacos-springcloud-example</module>
+        <module>nacos-multienv-example</module>
     </modules>
 
     <parent>
